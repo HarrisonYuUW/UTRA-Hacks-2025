@@ -1,12 +1,11 @@
-#include <iostream>
-#include "Stopwatch.h"
+
 
 // Define color sensor pins
-#define S0 2
-#define S1 3
-#define S2 5
-#define S3 4
-#define sensorOut 9
+#define S0 9
+#define S1 10
+#define S2 11
+#define S3 12
+#define sensorOut 13
 
 // Calibration Values
 // *Get these from Calibration Sketch
