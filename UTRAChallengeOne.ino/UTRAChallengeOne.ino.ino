@@ -3,17 +3,17 @@
 Servo myservo;
 
 //Motor Pins
-#define IN1 1 //control pin for first motor
-#define IN2 2 //control pin for first motor
-#define IN3 3 //control pin for second motor
-#define IN4 4 //control pin for second motor
+#define IN1 2 //control pin for first motor
+#define IN2 3 //control pin for first motor
+#define IN3 4 //control pin for second motor
+#define IN4 5 //control pin for second motor
 
 // Define color sensor pins
-#define S0 5
-#define S1 6
-#define S2 7
-#define S3 8
-#define sensorOut 9
+#define S0 9
+#define S1 10
+#define S2 11
+#define S3 12
+#define sensorOut 13
 
 // Calibration Values
 // *Get these from Calibration Sketch
@@ -114,7 +114,7 @@ void setup() {
   pinMode(IN3, OUTPUT);
   pinMode(IN4, OUTPUT);
 
-  myservo.attach(10);  // attaches the servo on pin 9 to the servo object
+  myservo.attach(6);  // attaches the servo on pin 9 to the servo object
 
 
 }
