@@ -48,6 +48,49 @@ int previous = 0;
 
 int old = 0;
 
+int count_track = 0;
+
+int count_check = 0;
+
+// Function to read Red Pulse Widths
+int getRedPW() {
+	// Set sensor to read Red only
+	digitalWrite(S2,LOW);
+	digitalWrite(S3,LOW);
+	// Define integer to represent Pulse Width
+	int PW;
+	// Read the output Pulse Width
+	PW = pulseIn(sensorOut, LOW);
+	// Return the value
+	return PW;
+}
+
+// Function to read Green Pulse Widths
+int getGreenPW() {
+	// Set sensor to read Green only
+	digitalWrite(S2,HIGH);
+	digitalWrite(S3,HIGH);
+	// Define integer to represent Pulse Width
+	int PW;
+	// Read the output Pulse Width
+	PW = pulseIn(sensorOut, LOW);
+	// Return the value
+	return PW;
+}
+
+// Function to read Blue Pulse Widths
+int getBluePW() {
+	// Set sensor to read Blue only
+	digitalWrite(S2,LOW);
+	digitalWrite(S3,HIGH);
+	// Define integer to represent Pulse Width
+	int PW;
+	// Read the output Pulse Width
+	PW = pulseIn(sensorOut, LOW);
+	// Return the value
+	return PW;
+}
+
 void setup() {
   Serial.begin (9600);
 
@@ -123,7 +166,11 @@ void loop() {
     digitalWrite(IN3, HIGH);
     digitalWrite(IN4, LOW);  
   } else if (movement == 2){
-    if (count != 0){
+    if (count_track == 0) {
+      count_check = count;
+      count_track = 1;
+    }
+    if (count != (count_check / 2)){
       digitalWrite(IN1, HIGH);
       digitalWrite(IN2, LOW);
       digitalWrite(IN3, LOW);
@@ -149,17 +196,17 @@ void loop() {
     digitalWrite(IN3, HIGH);
     digitalWrite(IN4, LOW);
     if ((redValue >= blueValue) && (redValue >= greenValue)){
-      old = previous
-      previous = current
-      current = 0
+      old = previous;
+      previous = current;
+      current = 0;
     } else if ((greenValue >= redValue) && (greenValue >= blueValue)){
-      old = previous
-      previous = current
-      current = 1
+      old = previous;
+      previous = current;
+      current = 1;
     } else {
-      old = previous
-      previous = current
-      current = 2
+      old = previous;
+      previous = current;
+      current = 2;
     }
 
     if ((redValue <= 150) && (blueValue <= 150) && (greenValue <= 150)){
@@ -175,17 +222,17 @@ void loop() {
     digitalWrite(IN3, LOW);
     digitalWrite(IN4, HIGH);
     if ((redValue >= blueValue) && (redValue >= greenValue)){
-      old = previous
-      previous = current
-      current = 0
+      old = previous;
+      previous = current;
+      current = 0;
     } else if ((greenValue >= redValue) && (greenValue >= blueValue)){
-      old = previous
-      previous = current
-      current = 1
+      old = previous;
+      previous = current;
+      current = 1;
     } else {
-      old = previous
-      previous = current
-      current = 2
+      old = previous;
+      previous = current;
+      current = 2;
     }
 
     if (current == old){
@@ -221,43 +268,4 @@ void loop() {
   }
 
 }
-
-
-// Function to read Red Pulse Widths
-int getRedPW() {
-	// Set sensor to read Red only
-	digitalWrite(S2,LOW);
-	digitalWrite(S3,LOW);
-	// Define integer to represent Pulse Width
-	int PW;
-	// Read the output Pulse Width
-	PW = pulseIn(sensorOut, LOW);
-	// Return the value
-	return PW;
-}
-
-// Function to read Green Pulse Widths
-int getGreenPW() {
-	// Set sensor to read Green only
-	digitalWrite(S2,HIGH);
-	digitalWrite(S3,HIGH);
-	// Define integer to represent Pulse Width
-	int PW;
-	// Read the output Pulse Width
-	PW = pulseIn(sensorOut, LOW);
-	// Return the value
-	return PW;
-}
-
-// Function to read Blue Pulse Widths
-int getBluePW() {
-	// Set sensor to read Blue only
-	digitalWrite(S2,LOW);
-	digitalWrite(S3,HIGH);
-	// Define integer to represent Pulse Width
-	int PW;
-	// Read the output Pulse Width
-	PW = pulseIn(sensorOut, LOW);
-	// Return the value
-	return PW;
 }
