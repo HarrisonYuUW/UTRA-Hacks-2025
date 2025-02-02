@@ -10,7 +10,7 @@ In this year’s closed challenge, using their Arduino-based kits and only the s
 pending...
 
 
-**Team Contributors**
+**Team Contributors**  
 Gangadhar Chinta  
 Patricia Janecsko  
 Rishi Chakrabarty  
