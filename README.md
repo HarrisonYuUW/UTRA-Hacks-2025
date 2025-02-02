@@ -7,7 +7,7 @@ Over the last century, robotics has made huge strides by excelling in controlled
 In this year’s closed challenge, using their Arduino-based kits and only the supplemental materials provided in the hardware kit. Teams must design a robot to interpret colour-coded floor markers and use its sensors to accomplish three challenging courses.
 
 **Project Details** 
-## Challenge One: Autonomous Robot for Color Detection and Maze Navigation
+Our autonomous robot is designed to tackle multiple challenges, including color detection, maze navigation, and color pattern recognition. It uses an Arduino Uno R4, motors, and sensors to navigate complex environments, detect colors, and place flags at designated locations. With obstacle avoidance capabilities and a pattern-matching system, the robot efficiently interprets and responds to its surroundings, making it a versatile solution for autonomous exploration.
 
 ### Key Features
 - **Multi-Challenge Capability**: Completes three autonomous challenges:
