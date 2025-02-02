@@ -11,9 +11,9 @@ pending...
 
 
 **Team Contributors**
-Gangadhar Chinta
-Patricia Janecsko
-Rishi Chakrabarty
-Lauren Chow
-Khush Patel
-Harrison Yu
+Gangadhar Chinta  
+Patricia Janecsko  
+Rishi Chakrabarty  
+Lauren Chow  
+Khush Patel  
+Harrison Yu  
