@@ -47,10 +47,6 @@ Our autonomous robot is designed to tackle multiple challenges, including color 
 ![utrarobot](https://github.com/user-attachments/assets/3f66c04c-7433-48ad-b1c6-8f6cf17b0a0d)
 _Robot 27_
 
-**Results**  
-pending...
-
-
 **Team Contributors**  
 Gangadhar Chinta  
 Patricia Janecsko  
